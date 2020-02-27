@@ -28,7 +28,7 @@ func RequestHandler(writer http.ResponseWriter, request *http.Request) {
 	}
 
 	code := request.URL.Query().Get("code")
-	returnCode := 200
+	returnCode := 204
 	if code != "" {
 		returnCode, _ = strconv.Atoi(code)
 	}
