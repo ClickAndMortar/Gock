@@ -63,3 +63,4 @@ Following environment variables may be set:
 ## Enhancements
 
 * [ ] Pre-defined JSON responses
+* [ ] Random behavior
