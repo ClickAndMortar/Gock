@@ -2,6 +2,22 @@
 
 Gock is a simple HTTP mocking server (codes, timeout, random) written in Go.
 
+## Running
+
+### Locally
+
+```bash
+go get github.com/clickandmortar/gock
+
+gock
+```
+
+### With Docker
+
+```bash
+docker run --rm -p 8000:8000 clickandmortar/gock
+```
+
 ## Usage
 
 Default response code is `204` (No Content).
@@ -12,10 +28,6 @@ Two modes are available:
 
 * `default`: Gock replies to queries directly
 * `proxy`: Gock proxifies queries to another backend
-
-```
-go run main.go
-```
 
 ### Request with wait (for timeout tests)
 
@@ -47,3 +59,7 @@ Following environment variables may be set:
 | `GOCK_PROXY_CODE` | Response code in proxy mode | _none_ (backend code) |
 | `GOCK_PROXY_WAIT` | Waiting time in proxy mode (in seconds) | `0` |
 | `GOCK_PROXY_PERCENT` | Percentage (approximate) on which response code or waiting time apply | `100` |
+
+## Enhancements
+
+* [ ] Pre-defined JSON responses

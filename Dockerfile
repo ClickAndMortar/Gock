@@ -11,6 +11,4 @@ FROM debian:buster-slim
 
 COPY --from=go-builder /go/bin/app /usr/local/bin/gock
 
-EXPOSE 8000
-
 CMD ["gock"]
